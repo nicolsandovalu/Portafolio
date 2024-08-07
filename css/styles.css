@@ -139,38 +139,46 @@ span{
 
 /*sección 5*/
 
-.contenedor-conocimientos{
+#conocimiento {
+    text-align: center;
+    padding: 20px;
+}
+
+.contenedor-conocimientos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     max-width: 1280px;
     width: 90%;
     margin: auto;
-    
 }
 
-.conocimientos{
-    width: 25%;
-    padding: 38px;
+.conocimientos {
+    flex: 1 1 21%;
+    max-width: 300px;
+    padding: 20px;
     border-radius: 10px;
-    margin-bottom: 40px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.conocimientos p{
-    font-size: 20px;
+
+.conocimientos h4 {
+    font-size: 24px;
+    margin-top: 10px;
 }
 
-.color1{
+.color1 {
     background-color: rgb(210, 161, 255);
 }
 
-.color2{
+.color2 {
     background-color: rgb(232, 155, 255);
-}
-
-.conocimientos h4{
-    font-size: 30px;
-
 }
 
 /*final*/
@@ -207,13 +215,14 @@ span{
 #whatsapp a{
     background: none;
     position: fixed;
-    top: 75%;
-    right: 15px;
+    top: 70%;
+    left: 85%;
 
 }
 
-#whatsapp img{
+#whatsapp model-viewer{
     width: 80px;
+    padding: 20px;
 }
 
 .menu-icon{
@@ -313,16 +322,38 @@ span{
     .contenedor-porque {
         flex-direction: column;
         width: 80%;
-        margin: 0 auto 15px auto;
+        margin: 0 auto 50px auto;
         box-sizing: border-box;
     }
 
-    #whatsapp img {
-        position: fixed;
-        top: 73%;
-        right: 10px;
-        width: 50px;
+
+    .conocimientos {
+        flex: 1 1 45%;
+        max-width: 45%;
+        padding: 10px;
+        margin: 10px 1%;
     }
+
+    .conocimientos h4 {
+        font-size: 18px;
+    }
+
+    .conocimientos model-viewer {
+        width: 100%;
+        max-width: 80px; 
+
+    }
+
+    .contenedor-conocimientos {
+        justify-content: center;
+    }
+
+    #whatsapp model-viewer {
+        position: fixed;
+        left: 70%;
+        width: 70px;
+    }
+   
 }
 
 /* Estilos para dispositivos con un ancho máximo de 1024px */
@@ -396,10 +427,23 @@ span{
         box-sizing: border-box;
     }
 
-    #whatsapp img {
-        position: fixed;
-        top: 73%;
-        right: 10px;
-        width: 50px;
+    .conocimientos {
+        flex: 1 1 45%;
+        max-width: 45%;
     }
+
+    .conocimientos model-viewer {
+        max-width: 120px;
+    }
+
+    #whatsapp model-viewer {
+        position: fixed;
+        top: 71%;
+        width: 70px;
+        padding: 20px;
+        
+        
+    }
+   
+    
 }

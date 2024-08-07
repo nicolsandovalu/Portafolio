@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     var menuIcon = document.querySelector('.menu-icon');
     var nav = document.querySelector('nav');
@@ -32,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
 // Selecciona el botón
 const backToTopButton = document.getElementById('backToTop');
 
-// Asegúrate de que el botón exista antes de agregar el eventListener
 if (backToTopButton) {
     // Muestra el botón cuando el usuario se desplaza hacia abajo más de 20px
     window.addEventListener('scroll', function() {
@@ -51,3 +51,4 @@ if (backToTopButton) {
         });
     });
 }
+
