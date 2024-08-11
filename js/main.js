@@ -37,10 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
  const infoClose = document.getElementById('info-close');
 
  proyectos.forEach(proyecto => {
-     proyecto.addEventListener('click', () => {
+     proyecto.addEventListener('click', (event) => {
          const info = proyecto.getAttribute('data-info');
-         const infoParts = info.split('|')
-         infoText.innerHTML = `<h4>${infoParts[0]}</h4><p>${infoParts[1]}</p>`;
+         infoText.innerHTML = info;
          infoBox.style.display = 'block';
          event.stopPropagation(); // Evita que el evento se propague y cierre el cuadro inmediatamente
      });
