@@ -48,12 +48,12 @@ a{
 }
 
 h1{
-    font-size: 60px;
+    font-size: 100px;
     margin: 0;
 }
 
 h2{
-    font-size: 30px;
+    font-size: 50px;
     
 }
 
@@ -107,6 +107,62 @@ span{
 
 .owl-nav{
     text-align: center;
+}
+
+.proyecto img{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#info-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+#info-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+}
+
+#info-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+}
+
+#info-text h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#info-text p {
+    margin-bottom: 10px;
+    color: #000000;
+    font-size: 16px;
+}
+
+.proyecto {
+    cursor: pointer;
 }
 
 /*seccion por qué*/

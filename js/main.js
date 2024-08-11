@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     var menuIcon = document.querySelector('.menu-icon');
     var nav = document.querySelector('nav');
@@ -23,12 +22,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+
     // Llama a la función al cargar la página
     handleMenuToggle();
 
     // Llama a la función cada vez que se redimensiona la ventana
     window.addEventListener('resize', handleMenuToggle);
 });
+
+ // Sección de proyectos
+ const proyectos = document.querySelectorAll('.proyecto');
+ const infoBox = document.getElementById('info-box');
+ const infoText = document.getElementById('info-text');
+ const infoClose = document.getElementById('info-close');
+
+ proyectos.forEach(proyecto => {
+     proyecto.addEventListener('click', () => {
+         const info = proyecto.getAttribute('data-info');
+         const infoParts = info.split('|')
+         infoText.innerHTML = `<h4>${infoParts[0]}</h4><p>${infoParts[1]}</p>`;
+         infoBox.style.display = 'block';
+         event.stopPropagation(); // Evita que el evento se propague y cierre el cuadro inmediatamente
+     });
+ });
+
+ // Cerrar el cuadro de información al hacer clic en la "x"
+ infoClose.addEventListener('click', () => {
+    infoBox.style.display = 'none';
+});
+
+// Cerrar el cuadro de información al hacer clic fuera de él
+document.addEventListener('click', function(event) {
+    if (infoBox.style.display === 'block' && !infoBox.contains(event.target)) {
+        infoBox.style.display = 'none';
+    }
+});
+
 
 // Selecciona el botón
 const backToTopButton = document.getElementById('backToTop');
