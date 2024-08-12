@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     var menuIcon = document.querySelector('.menu-icon');
     var nav = document.querySelector('nav');
+    var menuLinks = document.querySelectorAll('nav a');
 
     // Función para manejar la visibilidad del menú
     function handleMenuToggle() {
@@ -12,6 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     } else {
                         nav.style.display = 'none';
                     }
+                });
+
+                menuLinks.forEach (function(link) {
+                    link.addEventListener('click', function() {
+                        nav.style.display = 'none';
+                    });
                 });
             }
         } else {
